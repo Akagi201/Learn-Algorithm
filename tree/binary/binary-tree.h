@@ -13,9 +13,9 @@
 #define BINARY_TREE_H_
 
 /*
- * @struct btnode 
+ * @struct btnode
  *  
- * brief definition of binary tree 
+ * @brief definition of binary tree 
  *  
  * using pointer 
  *  
