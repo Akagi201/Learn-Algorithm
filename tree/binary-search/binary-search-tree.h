@@ -13,7 +13,7 @@
 #define BINARY_SEARCH_TREE_H_
 
 /*
- * @struct stnode
+ * @struct bstnode
  *  
  * @brief definition of binary search tree 
  *  
@@ -23,20 +23,22 @@
  * @date 2014/02/17
  */
 typedef int T;
-struct stnode{
+struct bstnode{
     T data;
-    struct stnode *left;
-    struct stnode *right;
+    struct bstnode *left;
+    struct bstnode *right;
 };
 
-void make_tree(struct stnode **tree);
+struct bstnode* make_tree(T element);
 
-void insert(T const element);
+void insert(struct bstnode *p_bstree, T element);
 
-void find(T const element);
+struct bstnode *find_iterative(struct bstnode *p_bstree, T element);
 
-void erase(T const element);
+struct bstnode *find_recursive(struct bstnode *p_bstree, T element);
 
-void in_order(struct stnode *tree);
+void erase(struct bstnode **pp_bstree, T element);
+
+void inorder_recursive(struct bstnode *p_bstree);
 
 #endif
